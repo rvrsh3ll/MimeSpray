@@ -96,7 +96,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='A script to brute force mimecast logins')
     parser.add_argument('--emails', action='store', help='A list of emails in user@example.com format')
     parser.add_argument('--password', action='store', help='A password to use: Summer2019')
-    parser.add_argument('--app_id', action='store', default='b3d85c4e-2e85-4a92-8d55-c6da325d4ef7', help='Arbitrary Application ID')
+    parser.add_argument('--app_id', action='store', help='Required Application ID', required=True)
     parser.add_argument('--auth_type', action='store', default='Basic-AD', help='Authentication: Basic-AD, Basic-Cloud')
     parser.add_argument('--outfile', action='store', default='outfile.log', help='Log results to this file')
     args = parser.parse_args()
